@@ -12,7 +12,13 @@ namespace mathsharp
         public static Object CalculateExpression(String prompt)
         {
             Expression expression = new Expression(prompt);
-            return expression.Evaluate();
+            try 
+            {
+                return expression.Evaluate();
+            } catch(EvaluationException e)
+            {
+                return "ERROR: Syntax";
+            }
         }
     }
 }

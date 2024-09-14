@@ -13,10 +13,13 @@ namespace mathsharp
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            Application.EnableVisualStyles();
+        { 
+
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Form1 calcForm = new Form1();
+            calcForm.Text = "Mathsharp";
+            Application.Run(calcForm);
         }
     }
 }
