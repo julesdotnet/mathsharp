@@ -106,6 +106,7 @@
             this.equals.TabIndex = 6;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = true;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // button1
             // 
@@ -212,10 +213,9 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(-1, 3);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(1535, 62);
             this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "";
-            this.textBox1.ReadOnly = true;
             // 
             // Form1
             // 

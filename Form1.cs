@@ -92,5 +92,10 @@ namespace mathsharp
         {
             textBox1.AppendText("/");
         }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = CalculationProcessor.CalculateExpression(textBox1.Text).ToString(); 
+        }
     }
 }
