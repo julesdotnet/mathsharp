@@ -18,7 +18,7 @@ namespace mathsharp
             Application.SetCompatibleTextRenderingDefault(false);
             Application.EnableVisualStyles();
             Form1 calcForm = new Form1();
-            calcForm.Text = "Mathsharp";
+            calcForm.Text = "Mathsharp v0.1";
             Application.Run(calcForm);
         }
     }

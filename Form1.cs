@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace mathsharp
 {
     public partial class Form1 : Form
-    {
+    { 
+        char[] operators = { '+', '-', '*', '/' };
+
         private bool textboxContainsResult = false;
 
         public Form1()
@@ -22,7 +24,10 @@ namespace mathsharp
         private void plus_Click(object sender, EventArgs e)
         {
             checkTextBoxMode();
-            textBox1.AppendText("+");
+            if (checkLastFieldForOperator())
+            {
+                textBox1.AppendText("+");
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -94,19 +99,28 @@ namespace mathsharp
         private void minus_Click(object sender, EventArgs e)
         {
             checkTextBoxMode();
-            textBox1.AppendText("-");
+            if (checkLastFieldForOperator())
+            {
+                textBox1.AppendText("-");
+            }
         }
 
         private void multiply_Click(object sender, EventArgs e)
         {
             checkTextBoxMode();
-            textBox1.AppendText("*");
+            if (checkLastFieldForOperator())
+            {
+                textBox1.AppendText("*");
+            }
         }
 
         private void divide_Click(object sender, EventArgs e)
         {
             checkTextBoxMode();
-            textBox1.AppendText("/");
+            if(checkLastFieldForOperator())
+            {
+                textBox1.AppendText("/");
+            }
         }
 
         private void equals_Click(object sender, EventArgs e)
@@ -124,5 +138,28 @@ namespace mathsharp
             }
         }
 
+        private bool checkLastFieldForOperator()
+        {
+            if (textBox1.Text.Length > 0 && operators.Contains(textBox1.Text.Last()))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            checkTextBoxMode();
+            textBox1.AppendText("(");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            checkTextBoxMode();
+            textBox1.AppendText(")");
+        }
     }
 }
