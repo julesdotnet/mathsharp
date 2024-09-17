@@ -161,5 +161,10 @@ namespace mathsharp
             checkTextBoxMode();
             textBox1.AppendText(")");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText(".");
+        }
     }
 }
